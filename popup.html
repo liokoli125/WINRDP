@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .feature-btn {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    .feature-btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+    .settings {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+    }
+    .input-group {
+      margin: 10px 0;
+    }
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 5px;
+      opacity: 0.9;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      box-sizing: border-box;
+    }
+    .status {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 15px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>🧠 Smart Study Assistant</h2>
+  </div>
+  
+  <button class="feature-btn" id="ocrBtn">📸 OCR Text Scanner</button>
+  <button class="feature-btn" id="translateBtn">🌐 Immersive Translate</button>
+  <button class="feature-btn" id="aiBtn">🤖 AI Question Helper</button>
+  <button class="feature-btn" id="toggleBtn">⚡ Toggle Assistant</button>
+  
+  <div class="settings">
+    <div class="input-group">
+      <label>AI API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your API key">
+    </div>
+    
+    <div class="input-group">
+      <label>Target Language:</label>
+      <select id="targetLang">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+        <option value="ja">Japanese</option>
+        <option value="ar">Arabic</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+      </select>
+    </div>
+    
+    <button class="feature-btn" id="saveBtn">💾 Save Settings</button>
+  </div>
+  
+  <div class="status" id="status">Ready to assist!</div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
